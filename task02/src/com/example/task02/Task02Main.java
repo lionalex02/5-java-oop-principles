@@ -12,10 +12,19 @@ public class Task02Main {
     public static void main(String[] args) {
         Bill bill = new Bill();
         bill.add(ITEM1, 10);
-        bill.add(ITEM3, 3);
+        bill.add(ITEM3, 5);
         bill.add(ITEM6, 1);
         System.out.println(bill);
         bill.add(ITEM3, 3);
         System.out.println(bill);
+
+        DiscountBill discountBill = new DiscountBill(35.8);
+        discountBill.add(ITEM1, 10);
+        discountBill.add(ITEM3, 5);
+        discountBill.add(ITEM6, 1);
+        System.out.println(discountBill);
+        System.out.println("Discount: " + discountBill.getDiscount());
+        System.out.println("Formatted discount: " + discountBill.getSizeDiscount());
+        System.out.println("Absolute discount: " + discountBill.getAbsoluteDiscount());
     }
 }
